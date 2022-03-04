@@ -1,0 +1,135 @@
+.main {
+    background-color: #131313;
+    padding: 10rem 0;
+
+    &__container {
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 90%;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+        z-index: 1;
+        max-width: 1300px;
+        padding: 0 50px;
+
+        @include tablet3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin: 0 auto;
+            height: 90%;
+        }
+    }
+
+    &__content {
+        color: #fff;
+        width: 100%;
+
+        @include tablet3 {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+
+        h1 {
+            font-size: 2rem;
+            background-color: #fe3b6f;
+            background-image: linear-gradient(to top,#ff087b 0%,#ed1a52 100%);
+            background-size: 100%;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+
+            @include tablet3 {
+                font-size: 2.5rem;
+                margin-top: 2rem;
+            }
+
+            @include mobile {
+                font-size: 1rem;
+                margin-top: 3rem;
+            }
+        }
+
+        h2 {
+            font-size: 4rem;
+            background: #ff8177;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #9114ff, #da22ff);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #8f0eff, #da22ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -moz-text-fill-color: transparent;
+
+            @include tablet3 {
+                font-size: 3rem;                
+            }
+
+            @include mobile {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            margin-top: 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+
+            @include tablet3 {
+                font-size: 1.5rem;
+                margin-top: 1rem;                
+            }
+
+            @include mobile {
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__img--container{
+        @include tablet3{
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    &__img--card{
+        align-items: center;
+        margin: 10px;
+        height: 500px;
+        width: 500px;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #fff;
+        background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+
+        @include tablet3 {
+            height: 425px;
+            width: 425px;
+        }
+
+        @include mobile {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    .fa-layer-group,
+    .fa-users {
+        font-size: 14rem;
+
+        @include mobile {
+            font-size: 4rem;
+        }
+    }
+}
